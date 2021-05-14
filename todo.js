@@ -1,6 +1,6 @@
 const add = document.querySelector('.add');
 const todo = document.querySelector('.todo');
-
+const searchSprint=document.querySelector('.search input')
 
 const templateForNewSprint=sprint=>{
     const list=
@@ -34,3 +34,19 @@ todo.addEventListener('click', event=>{
     }
 })
 
+//search sprint
+const filterSprints=(term)=>{
+    Array.from(todo.children)
+    
+        .filter((sprint)=>!sprint.textContent.includes(term))
+        .forEach((sprint)=> sprint.classList.add('filtered'))
+    Array.from(todo.children)
+        .filter((sprint)=>sprint.textContent.includes(term))
+        .forEach((sprint)=> sprint.classList.remove('filtered'))
+}
+searchSprint.addEventListener('keyup', ()=>{
+
+    const term=searchSprint.value.trim().toLowerCase()
+    filterSprints(term)
+
+})
