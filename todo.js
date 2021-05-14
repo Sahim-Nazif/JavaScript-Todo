@@ -26,4 +26,11 @@ add.addEventListener('submit', event => {
   
 })
 
+//deleting sprint
+todo.addEventListener('click', event=>{
+
+    if (event.target.classList.contains('delete')) {
+        event.target.parentElement.remove();
+    }
+})
 
