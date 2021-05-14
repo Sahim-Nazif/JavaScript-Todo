@@ -5,11 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="todo.css">
     <title>JavaScript Todo</title>
 </head>
 <body>
-    
+    <div class="container">
+        <header class='text-center text-light my-4'>
+            <h1 class='mb-4'>Daily Sprints</h1>
+            <form class='search'>
+                <input class='form-control m-auto' type='text' name='search' placeholder='search sprint'>
+            </form>
+         </header>
+          <ul class='list-group todo mx-auto text-light'>
+              <li class='list-group-item d-flex justify-content-between align-items-center'>
+                  <span>Learn React</span>
+                  <i class="fas fa-trash"></i>
+              </li>
+          </ul>
+          <ul class='list-group todo mx-auto text-light'>
+            <li class='list-group-item d-flex justify-content-between align-items-center'>
+                <span>Next Spring Code Deployment</span>
+                <i class="fas fa-trash"></i>
+            </li>
+        </ul>
+        <ul class='list-group todo mx-auto text-light'>
+            <li class='list-group-item d-flex justify-content-between align-items-center'>
+                <span>Merge Branch 44</span>
+                <i class="fas fa-trash"></i>
+            </li>
+        </ul>
+    </div>
     <script src='todo.js'></script>
 </body>
 </html>
